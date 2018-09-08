@@ -7,6 +7,7 @@ const nib = require('nib')
 const koutoSwiss = require('kouto-swiss')
 const shell = require('gulp-shell')
 const standard = require('gulp-standard')
+const surge = require('gulp-surge')
 
 const paths = {
   html: './src/pug/**/*',
@@ -59,6 +60,13 @@ gulp.task('pug', () => {
     .pipe(pug())
     .pipe(gulp.dest('./docs'))
     .pipe(connect.reload())
+})
+
+gulp.task('deploy', [], () => {
+  return surge({
+    project: './docs',
+    domain: 'eleicoes2018.surge.sh'
+  })
 })
 
 gulp.task('watch', () => {
