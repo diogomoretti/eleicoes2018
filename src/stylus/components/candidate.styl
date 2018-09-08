@@ -1,0 +1,64 @@
+.candidate-item
+  display flex
+  margin 1em 0 5em
+  box-shadow 0 5px 10px rgba(#ccc, .1)
+
+  &-column__photo
+    flex-basis 25%
+
+    @media $bp-phone
+      flex-basis 35%
+      padding-right 2em
+
+  &-column__content
+    flex 1
+    padding-top 1em
+
+    @media $bp-phone
+      padding-top 2em
+
+  &__photo
+    display block
+    height 170px
+    width 122px
+    background url('../img/loading.gif') center no-repeat #fff
+    background-size 30px auto
+    border 1px solid #eee
+    border-radius 10px
+
+    &[src]
+      filter grayscale(100%)
+      max-width 100%
+      width auto
+      border-color transparent
+
+      @media $bp-phone
+        height auto
+
+  &__number
+    background #2f4858
+    font-size 2.2rem
+    font-weight bold
+    color #fff
+    border-radius 5px
+    padding .3em .5em .2em
+
+    @media $bp-phone
+      font-size 2rem
+
+  &__name
+    margin .6em 0
+    font-size 2.7rem
+
+    @media $bp-phone
+      font-size 2.5rem
+
+  &__coalition
+    margin .4em 0
+    color #aaa
+    font-weight normal
+    font-size 1.6rem
+    line-height 1.6
+
+    @media $bp-phone
+      font-size 1.6rem

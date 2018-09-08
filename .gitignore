@@ -1,0 +1,6 @@
+node_modules/
+temp
+*.log
+.idea
+.DS_Store
+.cache
