@@ -37,7 +37,7 @@ gulp.task('js', () => {
   gulp.src('./src/js/*.js', {read: false})
     .pipe(plumber())
     .pipe(shell([
-      './node_modules/parcel-bundler/bin/cli.js <%= file.path %> --public-url ./ --out-dir ./docs/assets/js'
+      './node_modules/parcel-bundler/bin/cli.js <%= file.path %> --out-dir ./docs/assets/js'
     ]))
     .pipe(connect.reload())
 })

@@ -330,6 +330,7 @@ body {
   background-size: 30px auto;
   border: 1px solid #eee;
   border-radius: 10px;
+  overflow: hidden;
 }
 .candidate-item__photo[src] {
   filter: grayscale(100%);
