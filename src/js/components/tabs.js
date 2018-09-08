@@ -17,9 +17,10 @@ class Tabs {
 
   listenClick (trigger) {
     let changeTab = trigger => this.changeTabs(trigger)
+    let tab = $('.tab-list__item')
 
-    $('.tab-list__item').on('click', function () {
-      $('.tab-list__item').removeClass('active')
+    tab.on('click', function () {
+      tab.removeClass('active')
       $(this).addClass('active')
       changeTab(trigger)
     })
