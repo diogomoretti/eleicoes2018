@@ -1,2 +1,2 @@
 # Eleições 2018
-> For brazilians to choice
+> Para brasileiros escolherem melhor =]
