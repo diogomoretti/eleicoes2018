@@ -2,12 +2,12 @@ import $ from 'domtastic'
 
 class Tabs {
   constructor (trigger) {
-    this.changeTabs(trigger)
+    this.trigger = trigger
     this.listenClick(trigger)
   }
 
-  changeTabs (trigger) {
-    let context = $(trigger)
+  render () {
+    let context = $(this.trigger)
     let tabActive = context.find('.tab-list__item.active')
     let tab = tabActive.data('tab')
 
@@ -15,14 +15,14 @@ class Tabs {
     context.find(`.tab-content__item[data-tab="${tab}"]`).addClass('active')
   }
 
-  listenClick (trigger) {
-    let changeTab = trigger => this.changeTabs(trigger)
+  listenClick () {
+    let changeTab = () => this.render()
     let tab = $('.tab-list__item')
 
     tab.on('click', function () {
       tab.removeClass('active')
       $(this).addClass('active')
-      changeTab(trigger)
+      changeTab()
     })
   }
 }
