@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - stable
+script:
+  - "gulp build"
+deploy:
+  provider: surge
+  project: ./docs/
+  domain: eleicoes2018.surge.sh
