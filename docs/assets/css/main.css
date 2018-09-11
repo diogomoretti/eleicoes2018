@@ -1,10 +1,5 @@
 @font-face {
   font-family: 'Objectivity';
-  font-weight: 900;
-  src: url("../fonts/Objectivity-Black.woff2") format("woff2");
-}
-@font-face {
-  font-family: 'Objectivity';
   font-weight: bold;
   src: url("../fonts/Objectivity-Bold.woff2") format("woff2");
 }
