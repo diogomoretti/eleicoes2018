@@ -1,59 +1,58 @@
-.tabs
-  .tab-list
-    list-style none
-    margin 0
-    padding 0
-    display flex
-    border-bottom 1px solid #eee
+.tab-list
+  list-style none
+  margin 0
+  padding 0
+  display flex
+  border-bottom 1px solid #eee
 
-    &__item
-      position relative
-      flex 1
-      color #aaa
-      text-align center
-      font-size 1.5rem
-      padding-bottom 1.2em
-      padding-top 1em
-      cursor pointer
-      transition color .5s ease
+  &__item
+    position relative
+    flex 1
+    color #aaa
+    text-align center
+    font-size 1.5rem
+    padding-bottom 1.2em
+    padding-top 1em
+    cursor pointer
+    transition color .5s ease
 
-      .abbr
-        display none
-
-      @media $bp-phone
-        font-size 1.3rem
-
-        .full
-          display none
-
-        .abbr
-          display block
-
-      &:after
-        content ''
-        position absolute
-        display block
-        left 0
-        right 0
-        height 3px
-        bottom -2px
-        background transparent
-        transition background .5s ease
-
-      &:hover
-        color @color + 30%
-
-      &.active
-        color #000
-
-        &:after
-          background #000
-
-  .tab-content
-    padding-top 3em
-
-    &__item
+    .abbr
       display none
 
-      &.active
+    @media $bp-phone
+      font-size 1.3rem
+
+      .full
+        display none
+
+      .abbr
         display block
+
+    &:after
+      content ''
+      position absolute
+      display block
+      left 0
+      right 0
+      height 3px
+      bottom -2px
+      background transparent
+      transition background .5s ease
+
+    &:hover
+      color @color + 30%
+
+    &.active
+      color #000
+
+      &:after
+        background #000
+
+.tab-content
+  padding-top 3em
+
+  &__item
+    display none
+
+    &.active
+      display block
