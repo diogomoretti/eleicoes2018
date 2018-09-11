@@ -342,6 +342,11 @@ body {
   border-radius: 10px;
   overflow: hidden;
 }
+@media (max-width: 580px) {
+  .candidate-item__photo {
+    width: 100%;
+  }
+}
 .candidate-item__photo[src] {
   filter: grayscale(100%);
   max-width: 100%;
