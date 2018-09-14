@@ -1,4 +1,16 @@
-import { ELECTION, STATE } from './config'
+const ELECTION = '2022802018'
+let STATE = 'MG'
+let STATE_NAME = 'Minas Gerais'
+
+let statesFromMap = document.querySelectorAll('#map .state')
+for (let stt of statesFromMap) {
+  stt.addEventListener('click', (e) => {
+    e.preventDefault()
+    STATE = stt.getAttribute('data-state')
+    STATE_NAME = stt.querySelector('desc').textContent
+    document.querySelector('.header-description').textContent = `${STATE_NAME}`
+  })
+}
 
 const makeAPIUrl = (state, type) => {
   return `http://divulgacandcontas.tse.jus.br/divulga/rest/v1/candidatura/listar/2018/${state}/${ELECTION}/${type}/candidatos`
@@ -6,7 +18,6 @@ const makeAPIUrl = (state, type) => {
 
 const getList = type => {
   let api = ''
-
   switch (type) {
     case 'presidente':
       api = makeAPIUrl('BR', '1')

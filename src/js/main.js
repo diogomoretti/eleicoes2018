@@ -4,4 +4,10 @@ import Render from './components/render'
 const tabs = new Tabs('.tabs')
 tabs.render()
 
-Render()
+let statez = document.querySelectorAll('#map .state')
+for (let stz of statez) {
+  stz.addEventListener('click', (e) => {
+    e.preventDefault()
+    Render()
+  })
+}

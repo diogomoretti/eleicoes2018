@@ -232,6 +232,9 @@ body {
   max-width: 30px;
   margin: 1em auto;
 }
+main.listing {
+  display: none;
+}
 .tab-list {
   list-style: none;
   margin: 0;
@@ -388,7 +391,7 @@ body {
   }
 }
 .header {
-  padding: 5em 0;
+  padding: 3em 0;
 }
 .header-title {
   margin: 0;
@@ -438,4 +441,107 @@ body {
 .footer-description a:hover {
   color: #000;
   border-color: #000;
+}
+.mapp {
+  padding: 0 0 5em;
+}
+.mapp #map {
+  display: block;
+  margin: 0 auto;
+}
+.mapp #map .state {
+  cursor: pointer;
+}
+.mapp #map .state .shape {
+  cursor: pointer;
+  -width: 0;
+}
+.mapp #map .state .label_icon_state {
+  fill: #fff;
+  font-family: Arial;
+  font-size: 11px;
+  line-height: 12px;
+  font-weight: normal;
+}
+.mapp #map .state .label_state {
+  display: none;
+  font-family: Arial;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+}
+.mapp #map .state:hover .label_state,
+.mapp #map .state.hover .label_state {
+  display: none;
+}
+.mapp #map .model-green .state .shape {
+  fill: #6cb361;
+}
+.mapp #map .model-green .state .icon_state {
+  fill: #10592f;
+}
+.mapp #map .model-green .state .label_icon_state {
+  fill: #fff;
+}
+.mapp #map .model-green .state .label_state {
+  fill: #666;
+}
+.mapp #map .model-green .state:hover .shape,
+.mapp #map .model-green .state.hover .shape {
+  fill: #2d68b2;
+}
+.mapp #map .model-green .state:hover .icon_state,
+.mapp #map .model-green .state.hover .icon_state {
+  fill: #5a95ce;
+}
+.mapp #map .model-orange .state .shape {
+  fill: #fd7132;
+}
+.mapp #map .model-orange .state .icon_state {
+  fill: #6cb361;
+}
+.mapp #map .model-orange .state .label_icon_state {
+  fill: #fff;
+}
+.mapp #map .model-orange .state .label_state {
+  fill: #666;
+}
+.mapp #map .model-orange .state:hover .shape,
+.mapp #map .model-orange .state.hover .shape {
+  fill: #c93f04;
+}
+.mapp #map .model-orange .state:hover .icon_state,
+.mapp #map .model-orange .state.hover .icon_state {
+  fill: #10592f;
+}
+.mapp #map .model-darkgreen .state .shape {
+  fill: #366823;
+}
+.mapp #map .model-darkgreen .state .icon_state {
+  fill: #2779c6;
+}
+.mapp #map .model-darkgreen .state .label_icon_state {
+  fill: #fff;
+}
+.mapp #map .model-darkgreen .state .label_state {
+  fill: #666;
+}
+.mapp #map .model-darkgreen .state:hover .shape,
+.mapp #map .model-darkgreen .state.hover .shape {
+  fill: #4a8c31;
+}
+.mapp #map .model-darkgreen .state:hover .icon_state,
+.mapp #map .model-darkgreen .state.hover .icon_state {
+  fill: #5a95ce;
+}
+.backmap {
+  display: none;
+  font-size: 2em;
+  text-align: center;
+  padding: 0 0 1em;
+}
+.backmap:hover,
+.backmap:focus {
+  cursor: pointer;
+  font-weight: 800;
 }

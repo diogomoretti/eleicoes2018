@@ -14,6 +14,25 @@ export default function render () {
       candidateDiv.html(renderCandidates(res.candidatos, res.unidadeEleitoral.sigla))
     })
   })
+
+  mapListChange()
+}
+
+const mapListChange = () => {
+  const mapCont = document.querySelector('.mapp')
+  const listCont = document.querySelector('.listing')
+  const backMap = document.querySelector('.backmap')
+  mapCont.style.display = 'none'
+  listCont.style.display = 'block'
+  backMap.style.display = 'block'
+  backMap.addEventListener('click', () => {
+    mapCont.style.display = 'block'
+    listCont.style.display = 'none'
+    backMap.style.display = 'none'
+    stop()
+    console.clear()
+    document.querySelector('.header-description').textContent = 'Brasil'
+  })
 }
 
 const renderCandidates = (data, state) => {
