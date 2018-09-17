@@ -19,13 +19,13 @@ html
 
     link(rel='stylesheet' href='assets/css/main.css')
   body
-    div.site-wrapper
+    .site-wrapper
       header.header
         h1.header-title
           span Eleições 2018
         p.header-description santa catarina
       main.main
-        div.tabs
+        .tabs
           ul.tab-list
             li.tab-list__item.active(data-tab='tab1') #[span.full Presidente] #[span.abbr Presidente]
             li.tab-list__item(data-tab='tab2') #[span.full Governador] #[span.abbr Governo]
@@ -33,12 +33,12 @@ html
             li.tab-list__item(data-tab='tab4') #[span.full Federal] #[span.abbr Federal]
             li.tab-list__item(data-tab='tab5') #[span.full Estadual] #[span.abbr Estadual]
 
-          div.tab-content
-            div.tab-content__item(data-tab='tab1' data-candidate='presidente')
-            div.tab-content__item(data-tab='tab2' data-candidate='governador')
-            div.tab-content__item(data-tab='tab3' data-candidate='senador')
-            div.tab-content__item(data-tab='tab4' data-candidate='federal')
-            div.tab-content__item(data-tab='tab5' data-candidate='estadual')
+          .tab-content
+            .tab-content__item(data-tab='tab1' data-candidate='presidente')
+            .tab-content__item(data-tab='tab2' data-candidate='governador')
+            .tab-content__item(data-tab='tab3' data-candidate='senador')
+            .tab-content__item(data-tab='tab4' data-candidate='federal')
+            .tab-content__item(data-tab='tab5' data-candidate='estadual')
       footer.footer
         p.footer-description As informações contidas nessa página foram retiradas do #[a(href="http://divulgacandcontas.tse.jus.br" target="_blank") Site Oficial do TSE].
         p.footer-description Este projeto tem o #[a(href="https://github.com/diogomoretti/eleicoes2018" target="_blank") código aberto] sob a #[a(href="https://pt.wikipedia.org/wiki/Licen%C3%A7a_MIT" target="_blank") Licença MIT].
