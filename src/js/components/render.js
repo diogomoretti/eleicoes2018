@@ -19,18 +19,15 @@ export default function render () {
 }
 
 const mapListChange = () => {
-  const mapCont = document.querySelector('.mapp')
-  const listCont = document.querySelector('.listing')
+  const wrapperDiv = document.querySelector('.site-wrapper')
   const backMap = document.querySelector('.backmap')
-  mapCont.style.display = 'none'
-  listCont.style.display = 'block'
-  backMap.style.display = 'block'
+  wrapperDiv.classList.add('listing')
   backMap.addEventListener('click', () => {
-    mapCont.style.display = 'block'
-    listCont.style.display = 'none'
-    backMap.style.display = 'none'
-    stop()
-    console.clear()
+    wrapperDiv.classList.add('mapping')
+    wrapperDiv.classList.remove('listing')
+    getList.abort();
+    // stop()
+    // console.clear()
     document.querySelector('.header-description').textContent = 'Brasil'
   })
 }

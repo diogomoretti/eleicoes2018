@@ -35,7 +35,6 @@ const getList = type => {
       api = makeAPIUrl(STATE, '7')
       break
   }
-
   return fetch(api).then(response => response.json()) // eslint-disable-line
 }
 
