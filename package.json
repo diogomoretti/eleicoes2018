@@ -23,5 +23,8 @@
     "kouto-swiss": "^1.1.0",
     "nib": "^1.1.2",
     "parcel-bundler": "^1.9.7"
+  },
+  "dependencies": {
+    "google-maps": "^3.3.0"
   }
 }
