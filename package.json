@@ -7,7 +7,7 @@
     "url": "diogo.pearljam@gmail.com"
   },
   "scripts": {
-    "start": "gulp connect & gulp watch"
+    "start": "gulp server"
   },
   "devDependencies": {
     "babel-plugin-transform-async-to-generator": "^6.24.1",
