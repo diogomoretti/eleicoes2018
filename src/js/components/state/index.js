@@ -11,7 +11,7 @@ const getUfCode = () =>
         geocoder.geocode(
           { location: coords },
           data => ufByCep(data[0].formatted_address.match(REGEXP_CEP)[0])
-            .then(({ uf }) => response(uf))
+            .then(({ uf }) => resolve(uf))
         )
       })
     })

@@ -2,13 +2,13 @@ const currentLocation = () => {
   return new Promise((resolve, reject) => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(({ coords }) => {
-        res({
+        resolve({
           lat: parseFloat(coords.latitude),
           lng: parseFloat(coords.longitude)
         })
       })
     }
-    return rej(new Error('Navigator Geolocation not suported in your browser'))
+    return reject(new Error('Navigator Geolocation not suported in your browser'))
   })
 }
 
