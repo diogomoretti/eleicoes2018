@@ -1,5 +1,5 @@
-export const currentLocation = () => {
-  return new Promise((res, rej) => {
+const currentLocation = () => {
+  return new Promise((resolve, reject) => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(({ coords }) => {
         res({
@@ -11,3 +11,5 @@ export const currentLocation = () => {
     return rej(new Error('Navigator Geolocation not suported in your browser'))
   })
 }
+
+export default currentLocation

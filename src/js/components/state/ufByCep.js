@@ -1,1 +1,3 @@
-export const ufByCep = cep => fetch(`https://viacep.com.br/ws/${cep}/json/`).then(o => o.json())
+const ufByCep = cep => fetch(`https://viacep.com.br/ws/${cep}/json/`).then(o => o.json())
+
+export default ufByCep
